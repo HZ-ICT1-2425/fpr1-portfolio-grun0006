@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 class PostController extends controller
 {
-    public function show($page) {
-        $pageurl = 'posts.post' . $page;
+    public function show($page)
+    {
         if ($page <= 5) {
-            return view($pageurl, [
+            return view('posts.show', [
                 'page' => $page
             ]);
         } else {
